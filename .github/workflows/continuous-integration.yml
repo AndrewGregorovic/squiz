@@ -29,10 +29,10 @@ jobs:
         with:
           host: 54.204.195.50
           username: github-actions
-          key: ${{secrets.SSH_KEY}}
+          key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
             rm -rf squiz
             git clone https://github.com/AndrewGregorovic/squiz.git
             python3.8 -m venv /home/github-actions/squiz/venv
-            /home/github-actions/squiz/venv/bin/pip install -r /home/github-actions/squiz/requirements.txt
+            /home/github-actions/squiz/venv/bin/pip3.8 install -r /home/github-actions/squiz/requirements.txt
